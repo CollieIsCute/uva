@@ -2,9 +2,9 @@
 
 using namespace std;
 
-int f91(int N){
+inline int f91(int N){
     if (N <= 100){
-        f91(f91(N+11));
+        return 91;
     }
     else{
         return N-10;
@@ -15,7 +15,7 @@ int main(){
     int N;
     while(cin>>N) {
         if(N == 0)
-            ;
+            break;
         else
             cout<<"f91("<<N<<") = "<<f91(N)<<endl;
     }
