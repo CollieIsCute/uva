@@ -1,13 +1,13 @@
-def isEqualSquare(guessSq, bigNum):
-	return guessSq == bigNum
-
 def mySqrt(bigNum):
 	length = len(bigNum)
 	guessBig = bigNum = int(bigNum)
 	guessSmall = int(0)
+#	if length > 10:
+#		guessBig = int('9'*(length//7*4))
+#		guessSmall = int('1'*(length//7*3))
 	guess = (guessBig+guessSmall)//2
 	guessSq = guess*guess
-	while not isEqualSquare(guessSq, bigNum):
+	while guessSq != bigNum:
 		if guessSq > bigNum:
 			guessBig = guess-1
 		else:
