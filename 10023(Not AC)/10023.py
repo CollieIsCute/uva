@@ -8,7 +8,8 @@ def mySqrt(bigNum):
 	guess = (guessBig+guessSmall)//2
 	guessSq = guess*guess
 	while True:
-		if guessSq > bigNum:
+		if guessSmall==guessBig: break
+		elif guessSq > bigNum:
 			guessBig = guess-1
 		elif guessSq < bigNum:
 			guessSmall = guess+1
@@ -23,4 +24,7 @@ for i in range(int(n)):
 	while(inp==""):
 		inp = input()
 	output = mySqrt(inp)
-	print(output, end="\n\n")
+	if i != int(n):
+		print(output, end="\n\n")
+	else:
+		print(output)
