@@ -1,16 +1,14 @@
-import math
-
 def isAlmostEqualSquare(guess, bigNum):
 	guessSq = guess*guess
 	if guessSq == bigNum:
 		return True
-	elif guessSq<bigNum and (guess+1)*(guess+1)>bigNum:
-		return True
+#	elif guessSq<bigNum and (guess+1)*(guess+1)>bigNum:
+#		return True
 	return False
 
 def mySqrt(bigNum):
-	length = len(str(bigNum))
-	guessBig = int(bigNum)
+	length = len(bigNum)
+	guessBig = bigNum = int(bigNum)
 	guessSmall = int(0)
 	if(length>10):
 		guessBig = int('1'*(length//7*4))
@@ -26,12 +24,10 @@ def mySqrt(bigNum):
 		guessSq = guess*guess
 	return guess
 
-
 n = input()
 for i in range(int(n)):
 	inp = input()
 	while(inp==""):
 		inp = input()
-	inp = int(inp)
 	output = mySqrt(inp)
 	print(output, end="\n\n")
