@@ -22,9 +22,7 @@ n = input()
 for i in range(int(n)):
 	inp = input()
 	while(inp==""):
+		print(inp)
 		inp = input()
 	output = mySqrt(inp)
-	if i != int(n):
-		print(output, end="\n\n")
-	else:
-		print(output)
+	print(output)
