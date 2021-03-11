@@ -20,9 +20,10 @@ def mySqrt(bigNum):
 
 n = input()
 for i in range(int(n)):
-	inp = input()
+	inp=""
+	input()
 	while(inp==""):
-		print(inp)
+		print()
 		inp = input()
 	output = mySqrt(inp)
 	print(output)
