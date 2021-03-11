@@ -7,11 +7,12 @@ def mySqrt(bigNum):
 #		guessSmall = int('1'*(length//7*3))
 	guess = (guessBig+guessSmall)//2
 	guessSq = guess*guess
-	while guessSq != bigNum:
+	while True:
 		if guessSq > bigNum:
 			guessBig = guess-1
-		else:
+		elif guessSq < bigNum:
 			guessSmall = guess+1
+		else: break
 		guess = (guessBig+guessSmall)//2
 		guessSq = guess*guess
 	return guess
