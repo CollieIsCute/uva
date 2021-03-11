@@ -19,9 +19,9 @@ def mySqrt(bigNum):
 	return guess
 
 n = input()
+input()
 for i in range(int(n)):
-	inp=""
-	input()
+	inp=input()
 	while(inp==""):
 		print()
 		inp = input()
