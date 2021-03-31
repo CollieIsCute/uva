@@ -8,7 +8,7 @@ AlignAfterOpenBracket:	Align
 # 連續賦值時，對齊所有等號
 AlignConsecutiveAssignments:	true
 # 連續聲明時，對齊所有聲明的變量名
-AlignConsecutiveDeclarations:	true
+AlignConsecutiveDeclarations:	false
 # 左對齊逃脫換行(使用反斜杠換行)的反斜杠
 AlignEscapedNewlinesLeft:	true
 # 水平對齊二元和三元表達式的操作數

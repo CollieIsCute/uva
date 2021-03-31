@@ -1,4 +1,4 @@
-target = 100
+target = 725
 all:
 	g++ -std=c++17 $(target).cpp -o $(target)
 compress:

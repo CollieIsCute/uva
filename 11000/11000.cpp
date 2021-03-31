@@ -3,8 +3,8 @@
 using namespace std;
 
 int main() {
-	ll  super = 1, female, male;
-	int N	 = 0;
+	ll super = 1, female, male;
+	int N	= 0;
 	cin >> N;
 	while ( N != -1 ) {
 		female = 0;

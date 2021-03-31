@@ -17,8 +17,8 @@ private:
 };
 
 int main() {
-	int		t, amount;
-	string  temp;
+	int t, amount;
+	string temp;
 	Account acc;
 	cin >> t;
 	for ( int i = 0; i < t; i++ ) {
