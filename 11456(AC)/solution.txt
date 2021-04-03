@@ -1,0 +1,3 @@
+本題主要是 longest increasing subsequence 演算法的變化題。
+原本的 LIS 是只能從陣列的最後方 push, 或者取代陣列內某元素，最終得到所需長度的陣列。
+這題要可以從前或後放置車子，因此可以想像，最後完成的陣列，是由 LDS 然後 reverse 後，跟 LIS 合併而成。
