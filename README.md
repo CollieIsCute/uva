@@ -7,6 +7,8 @@
 	- AC，代表程式已經沒問題，但是尚未寫出 solution 和截圖
 	- Not AC 代表程式尚未完成測資。
 
-## 狀態
----
-| fji | jjj | kkk
+## 完成的題目
+
+| 題號 | 星數 | source code | screenshot | makefile | solution file |
+| -------- | -------- | -------- | ---| ---|---|
+|  |  |  | | | |

@@ -21,7 +21,7 @@ void updateReadme() {
 	std::string line = "";
 	fout.open( "new_README.md" );
 	fin.open( "README.md" );
-	while ( line != "## 狀態" ) {
+	while ( line != "## 完成的題目" ) {
 		getline( fin, line );
 		fout << line << std::endl;
 	}
