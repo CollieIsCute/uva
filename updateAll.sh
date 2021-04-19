@@ -20,7 +20,7 @@ function printLevel {
 }
 
 #update Readmetext
-temp=`cat $file| fgrep -on "## 完成的" | cut -f 1 -d ':' `
+temp=`cat $file| fgrep -on "### 完成的" | cut -f 1 -d ':' `
 head -n $temp $file > new_README.md
 rm $file
 mv new_README.md $file
