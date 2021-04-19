@@ -10,7 +10,7 @@ function printLevel {
 	printf " " >> $file
 	for i in $(seq 5)
 	do
-		if [ "$i" -le "$level" ]; then
+		if [ $i -le $level ]; then
 			echo -n "★" >> $file
 		else
 			echo -n "☆" >> $file
