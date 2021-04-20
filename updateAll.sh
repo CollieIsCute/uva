@@ -25,12 +25,12 @@ head -n $temp $file > new_README.md
 rm $file
 mv new_README.md $file
 #update ReadmeTable
-echo -e "- 共"`ls | sort | grep '[0-9]' | wc -w`"題\n" >> $file
+echo -e "- 共<b> "`ls | sort | grep '[0-9]' | wc -w`" </b>題\n" >> $file
 echo '| 題號 | 星數 | source code | screenshot | makefile | solution.txt |' >> $file
 echo '| :--------: | :--------: | :--------: | :--------: | :--------: | :--------: |' >> $file
 for problemNum in $(ls | sort | grep '[0-9]')
 do
-	echo -n "| $problemNum |" >> $file
+	echo -n "| <b>$problemNum</b> |" >> $file
 	printLevel $problemNum
 	if [ -e $problemNum\/$problemNum.* ]; then
 		echo -n ' O |' >> $file
