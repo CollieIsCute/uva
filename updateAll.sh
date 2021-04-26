@@ -2,7 +2,7 @@
 file="README.md"
 
 #auto clang-format
-clang-format -i */*.[ch]*
+clang-format -style=file -i */*.[ch]* 
 
 #write Readme
 function printLevel {

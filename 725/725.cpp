@@ -7,7 +7,7 @@ bool testIJ( int i, int j ) {
 	int temp = j, temp2 = j / i;
 	bool numUsed[ 10 ] = {};
 	for ( int iter = 0; iter < 5; iter++ ) {
-		numUsed[ temp % 10 ]  = true;
+		numUsed[ temp % 10 ] = true;
 		numUsed[ temp2 % 10 ] = true;
 		temp /= 10;
 		temp2 /= 10;

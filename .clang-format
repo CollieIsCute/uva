@@ -6,7 +6,7 @@ AccessModifierOffset:	-4
 # 開括號(開圓括號、開尖括號、開方括號)後的對齊: Align, DontAlign, AlwaysBreak(總是在開括號後換行)
 AlignAfterOpenBracket:	Align
 # 連續賦值時，對齊所有等號
-AlignConsecutiveAssignments:	true
+AlignConsecutiveAssignments:	false
 # 連續聲明時，對齊所有聲明的變量名
 AlignConsecutiveDeclarations:	false
 # 左對齊逃脫換行(使用反斜杠換行)的反斜杠
@@ -105,7 +105,7 @@ IncludeCategories:
   - Regex:	'.*'
     Priority:	1
 # 縮進case標籤
-IndentCaseLabels:	false
+IndentCaseLabels:	true
 # 縮進寬度
 IndentWidth:	4
 # 函數返回類型換行時，縮進函數聲明或函數定義的函數名
