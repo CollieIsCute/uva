@@ -54,7 +54,7 @@ int main() {
 			cin >> thisHotel;
 			hotels[ ++BigHotelNum ] = thisHotel;
 		}
-		cin>>edgeNum;
+		cin >> edgeNum;
 		int a, b, w;
 		for ( int i = 0; i < edgeNum; i++ ) {
 			cin >> a >> b >> w;

@@ -1,0 +1,9 @@
+1.先把每個個人股份用一個陣列存起來。
+2.接著設個 bool array[10000],依序把每個人（A,B,C......）丟入計算，要算出有可能出現的股份組合
+3.計算方式如下：
+	a.把x放入 array[x] = true;
+	b.把A放入 array, 則 array[x+A]也設成true;
+	c.把B放入 array, 則 array[x+B], array[x+A+B]均設成true
+	......
+4.經過上述計算，即可得出所有可能的array值，再找大於5001，並且能使 element value 為 true 的 array index, 即可求出答案。
+5.此題有 double( 或 float) 轉 int 的精度陷阱，要注意。
