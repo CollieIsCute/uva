@@ -1,4 +1,4 @@
-target = 11658
+target = 11026
 
 all:
 	g++ -g -std=c++17 $(target).cpp -o $(target)
