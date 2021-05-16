@@ -25,6 +25,7 @@ void SPFA( int source ) {
 	}
 	destination[ source ] = 0;
 	Q.push( Vertex( source, 0 ) );
+	hasInQ[source] = true;
 
 	while ( !Q.empty() ) {
 		int now = Q.front().number;
@@ -42,17 +43,17 @@ void SPFA( int source ) {
 }
 
 int main() {
-	int vertexNum, hotelNum, edgeNum, hotels[ MAX_N ];
+	int vertexNum, inputH, edgeNum, hotels[ MAX_N ];
 	int hotelAdj[ MAX_H ][ MAX_H ];
 	while ( cin >> vertexNum && vertexNum ) {
-		cin >> hotelNum;
+		cin >> inputH;
 		hotels[ 1 ] = 1;
-		hotels[ 2 ] = hotelNum;
-		int BigHotelNum = 2;  // add source and end
+		hotels[ 2 ] = inputH;
+		int hotelNum = 2;  // add source and end
 		int thisHotel;
-		for ( int i = 0; i < hotelNum; i++ ) {
+		for ( int i = 0; i < inputH; i++ ) {
 			cin >> thisHotel;
-			hotels[ ++BigHotelNum ] = thisHotel;
+			hotels[ ++hotelNum ] = thisHotel;
 		}
 		cin >> edgeNum;
 		int a, b, w;
@@ -65,16 +66,18 @@ int main() {
 			for ( int j = 0; j < MAX_H; j++ )
 				hotelAdj[ i ][ j ] = INFINITE;
 
-		for ( int i = 1; i <= BigHotelNum; i++ ) {
+		for ( int i = 1; i <= hotelNum; i++ ) {
 			hotelAdj[ i ][ i ] = 0;
 			SPFA( hotels[ i ] );
-			for ( int j = 1; j <= BigHotelNum; j++ )
-				if ( i != j && destination[ hotels[ j ] ] <= MAX_TIME )
+			for ( int j = 1; j <= hotelNum; j++ )
+				if ( i != j && destination[ hotels[ j ] ] <= MAX_TIME ){
+					//cout<<destination[hotels[j]]<<endl;
 					hotelAdj[ i ][ j ] = 1;
+				}
 		}
-		for ( int k = 1; k <= BigHotelNum; k++ )
-			for ( int i = 1; i <= BigHotelNum; i++ )
-				for ( int j = 1; j <= BigHotelNum; j++ )
+		for ( int k = 1; k <= hotelNum; k++ )
+			for ( int i = 1; i <= hotelNum; i++ )
+				for ( int j = 1; j <= hotelNum; j++ )
 					if ( hotelAdj[ i ][ k ] + hotelAdj[ k ][ j ] < hotelAdj[ i ][ j ] )
 						hotelAdj[ i ][ j ] = hotelAdj[ i ][ k ] + hotelAdj[ k ][ j ];
 
