@@ -25,7 +25,7 @@ void SPFA( int source ) {
 	}
 	destination[ source ] = 0;
 	Q.push( Vertex( source, 0 ) );
-	hasInQ[source] = true;
+	hasInQ[ source ] = true;
 
 	while ( !Q.empty() ) {
 		int now = Q.front().number;
@@ -70,8 +70,8 @@ int main() {
 			hotelAdj[ i ][ i ] = 0;
 			SPFA( hotels[ i ] );
 			for ( int j = 1; j <= hotelNum; j++ )
-				if ( i != j && destination[ hotels[ j ] ] <= MAX_TIME ){
-					//cout<<destination[hotels[j]]<<endl;
+				if ( i != j && destination[ hotels[ j ] ] <= MAX_TIME ) {
+					// cout<<destination[hotels[j]]<<endl;
 					hotelAdj[ i ][ j ] = 1;
 				}
 		}
