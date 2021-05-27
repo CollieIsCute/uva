@@ -6,3 +6,5 @@ compress:
 	zip -r B073040019-蔡孟師-$(target) ./*
 clean:
 	rm -f $(target) B073040019-蔡孟師-$(target).zip
+dclean:
+	rm -f $(target) B073040019-蔡孟師-$(target).zip *input* *output*

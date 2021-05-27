@@ -1,0 +1,2 @@
+1. 本題是先做出phiTable，接下來再依次填寫 depthphiTable, 接下來只要每次輸入 m, n, 兩數，即可查表後暴力加總得到答案。
+2. 若將 phi 函式的 parameter, 以及 local variable 改為 long long, 則程式會 TLE.
