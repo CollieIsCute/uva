@@ -21,9 +21,9 @@ int main() {
 	string temp;
 	Account acc;
 	cin >> t;
-	for ( int i = 0; i < t; i++ ) {
+	for( int i = 0; i < t; i++ ) {
 		cin >> temp;
-		if ( temp == "donate" ) {
+		if( temp == "donate" ) {
 			cin >> amount;
 			acc.donate( amount );
 		}

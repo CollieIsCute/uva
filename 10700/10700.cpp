@@ -11,10 +11,10 @@ ll getMax( istringstream& max ) {
 	ll num1, num2;
 	char now;
 	max >> num1;
-	while ( !max.eof() ) {
+	while( !max.eof() ) {
 		max >> now;
 		max >> num2;
-		if ( now == '+' ) {
+		if( now == '+' ) {
 			num1 = num1 + num2;
 		}
 		else {
@@ -25,7 +25,7 @@ ll getMax( istringstream& max ) {
 	}
 	numbers.push_back( num1 );
 	ll ans = 1;
-	while ( !numbers.empty() ) {
+	while( !numbers.empty() ) {
 		ans *= numbers.back();
 		numbers.pop_back();
 	}
@@ -38,10 +38,10 @@ ll getMin( istringstream& min ) {
 	ll num1, num2;
 	char now;
 	min >> num1;
-	while ( !min.eof() ) {
+	while( !min.eof() ) {
 		min >> now;
 		min >> num2;
-		if ( now == '*' ) {
+		if( now == '*' ) {
 			num1 = num1 * num2;
 		}
 		else {
@@ -52,7 +52,7 @@ ll getMin( istringstream& min ) {
 	}
 	numbers.push_back( num1 );
 	ll ans = 0;
-	while ( !numbers.empty() ) {
+	while( !numbers.empty() ) {
 		ans += numbers.back();
 		numbers.pop_back();
 	}
@@ -64,9 +64,9 @@ int main() {
 	cin >> n;
 	string line;
 
-	for ( int i = 0; i < n; i++ ) {
+	for( int i = 0; i < n; i++ ) {
 		getline( cin, line );
-		if ( line == "" )
+		if( line == "" )
 			getline( cin, line );
 		istringstream maxLine( line ), minLine( line );
 		ll big = getMax( maxLine );

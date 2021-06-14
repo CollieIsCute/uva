@@ -7,8 +7,8 @@ double getRadius( double a, double b, double c );
 int main() {
 	double a, b, c;
 	std::cout << std::fixed << std::setprecision( 3 );
-	while ( std::cin >> a >> b >> c ) {
-		if ( a == b && b == c && c == 0.0 ) {
+	while( std::cin >> a >> b >> c ) {
+		if( a == b && b == c && c == 0.0 ) {
 			std::cout << "The radius of the round table is: 0.000\n";
 			continue;
 		}
