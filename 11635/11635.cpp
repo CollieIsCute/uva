@@ -73,14 +73,14 @@ void initAllCities() {
 
 void SPFA( int hotelIndex ) {
 	queue< int > vertexForRelax;
-	vertexForRelax.push( hotels[hotelIndex] );
+	vertexForRelax.push( hotels[ hotelIndex ] );
 
 	int distFromSource[ MAX_CITIES ];
-	for( int i = 0; i < MAX_CITIES; i++ ) { //initialize
+	for( int i = 0; i < MAX_CITIES; i++ ) {	 // initialize
 		distFromSource[ i ] = INF;
 	}
 	distFromSource[ hotels[ hotelIndex ] ] = 0;
-	
+
 	while( !vertexForRelax.empty() ) {
 		relax( vertexForRelax, distFromSource );
 	}
@@ -96,7 +96,7 @@ void relax( queue< int >& vertexForRelax, int* distFromSource ) {
 	int now;
 	now = vertexForRelax.front();
 	vertexForRelax.pop();
-	for(const int& n : allCities[ now ].connections ) {
+	for( const int& n : allCities[ now ].connections ) {
 		int newDistance = distFromSource[ now ] + adjCities[ now ][ n ];
 		if( newDistance < distFromSource[ n ] ) {
 			distFromSource[ n ] = newDistance;
@@ -115,7 +115,7 @@ void setRoad( int pa, int pb, int distance ) {
 int BFS() {
 	queue< int > waitForSearchHotels;
 	waitForSearchHotels.push( 1 );
-	while(!waitForSearchHotels.empty()){
-		for(auto i : hotels[])
+	while( !waitForSearchHotels.empty() ) {
+		for( auto i : hotels[] )
 	}
 }
