@@ -26,7 +26,8 @@ int main() {
 				else if( k == 1 )
 					dp[ n ][ k ] = ( dp[ n - 1 ][ k ] + arr[ n ] ) % M;
 				else
-					dp[ n ][ k ] = ( ( dp[ n - 1 ][ k - 1 ] * arr[ n ] ) % M + dp[ n - 1 ][ k ] ) % M;
+					dp[ n ][ k ] =
+						( ( dp[ n - 1 ][ k - 1 ] * arr[ n ] ) % M + dp[ n - 1 ][ k ] ) % M;
 			}
 		}
 		ll maxDp = 0;
