@@ -4,8 +4,8 @@ using namespace std;
 
 class Account {
 public:
-	Account( int m = 0 ) : money( m ) {}
-	void donate( int m ) {
+	Account(int m = 0) : money(m) {}
+	void donate(int m) {
 		money += m;
 	}
 	void report() {
@@ -21,11 +21,11 @@ int main() {
 	string temp;
 	Account acc;
 	cin >> t;
-	for( int i = 0; i < t; i++ ) {
+	for(int i = 0; i < t; i++) {
 		cin >> temp;
-		if( temp == "donate" ) {
+		if(temp == "donate") {
 			cin >> amount;
-			acc.donate( amount );
+			acc.donate(amount);
 		}
 		else
 			acc.report();
