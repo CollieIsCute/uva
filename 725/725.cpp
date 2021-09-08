@@ -38,8 +38,7 @@ int main() {
 		if(!(vec[inputNum].size()))
 			cout << "There are no solutions for " << inputNum << ".\n";
 		for(int i = 0; i < vec[inputNum].size(); i++) {
-			cout << setw(5) << setfill('0') << vec[inputNum][i] << " / " << setw(5) << setfill('0')
-				 << vec[inputNum][i] / inputNum << " = ";
+			cout << setw(5) << setfill('0') << vec[inputNum][i] << " / " << setw(5) << setfill('0') << vec[inputNum][i] / inputNum << " = ";
 			cout << inputNum << endl;
 		}
 		cin >> inputNum;

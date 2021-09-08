@@ -7,7 +7,7 @@ const int MAXI = 11;
 const int MAXJ = 6005;
 
 int money[] = { 1, 2, 4, 10, 20, 40, 100, 200, 400, 1000, 2000 };  //把幣值*20作為整數儲存
-ll dp[11][6005] = {};  // dp[i][j] 表示前i種幣值要表示j元的方法數
+ll dp[11][6005] = {};											   // dp[i][j] 表示前i種幣值要表示j元的方法數
 
 int main() {
 
@@ -28,7 +28,7 @@ int main() {
 		}
 	}
 	while(cin >> input && input) {
-		int dollars = ( int )(input * 20);
+		int dollars = (int)(input * 20);
 		printf("%6.2f%17lld\n", input, dp[MAXI - 1][dollars]);
 	}
 }

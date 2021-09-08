@@ -14,7 +14,7 @@ int phi(int n) {
 		}
 	if(n > 1)
 		ans = ans / n * (n - 1);
-	return ( int )ans;
+	return (int)ans;
 }
 
 int phiTable[mn_MAX] = {};

@@ -39,7 +39,7 @@ int main() {
 		// cout<<cnt <<endl;
 		for(int i = 5001; i <= 10000; i++) {
 			if(probableCombi[i]) {
-				double ans = ( double )stocks[x] / i * 100.0;
+				double ans = (double)stocks[x] / i * 100.0;
 				// cout<<i<<"\t";
 				cout << fixed << setprecision(2) << ans << endl;
 				ans = ans;
